@@ -1,0 +1,59 @@
+body {
+  padding: 0;
+  background-image: url(../images/sayagata-400px-pattern.png);
+}
+header,
+nav,
+main,
+footer {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+div#wrapper {
+  grid-template-areas:
+    "header"
+    "regNav"
+    "content"
+    "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+  max-width: 64rem;
+  margin: 0 auto;
+  box-shadow: 0 0 10px #000;
+  background-color: #fff;
+}
+
+//header {} // end header
+
+nav {
+  ul {
+    padding-left: 0;
+    li {
+      width: auto;
+      float: left;
+      width: (100/7) * 1%;
+      border-right: 1px solid rgba(0, 0, 0, 0.3);
+      border-left: 1px solid rgba(0, 0, 0, 0.3);
+    }
+   
+    li a {
+      text-align: center; 
+      padding-left: 0;
+    }
+  }
+} // end nav
+
+main {
+  section { 
+    figure {
+    width: 30vw;
+  }
+  h2 {font-size: 2rem;}
+  p {font-size: 1.3rem;}
+}
+h1 {font-size: 2.8rem;}
+
+} // end main
+
+// footer {} // end footer

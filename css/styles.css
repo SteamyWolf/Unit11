@@ -1,0 +1,293 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Prevent adjustments of font size afer orientation changes in IE on Windows Phone and in iOS */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/* apply a natural box layout model to all elements */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* body stlyings */
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 16px; }
+
+/* grid area setup */
+#wrapper {
+  display: grid;
+  grid-template-areas: "hambNav" "header" "content" "footer" "regNav";
+  grid-template-columns: 100%;
+  grid-template-rows: auto; }
+
+/* ------------------------- header ------------------------- */
+header {
+  grid-area: header;
+  width: 100%;
+  background-color: #a56020;
+  color: #0a1c3d;
+  padding: 15px 2%;
+  border-bottom: 5px solid #62696f; }
+  header figure.logo {
+    width: 40%;
+    max-width: 120px; }
+  header figure.logo img {
+    width: 96%;
+    float: left;
+    border-radius: 2%;
+    padding-right: 4%; }
+  header form {
+    float: right; }
+    header form input {
+      width: 6rem;
+      border-radius: 10px;
+      margin-right: 2%;
+      padding: 0.2rem;
+      border: none;
+      transition: width 0.5s; }
+    header form input:focus {
+      width: 8rem; }
+  header h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    padding-top: 15px;
+    margin-left: 105px;
+    text-shadow: 0 0 4px #a56020; }
+
+/* ------------------------- navigation ------------------------- */
+div#hambNav {
+  grid-area: hambNav;
+  background-color: #a56020;
+  width: 100%; }
+  div#hambNav a {
+    text-decoration: none;
+    color: #0a1c3d;
+    padding: 10px;
+    font-size: 3rem; }
+
+nav {
+  grid-area: regNav;
+  width: 100%;
+  background-color: #a56020;
+  border-top: 5px solid #0a1c3d;
+  height: 100vh; }
+  nav div#navLinks {
+    grid-area: hambNav;
+    background-color: #a56020;
+    width: 100%; }
+    nav div#navLinks a {
+      text-decoration: none;
+      color: #0a1c3d;
+      padding: 10px;
+      font-size: 3rem; }
+  nav ul {
+    list-style-type: none;
+    padding-left: 2%;
+    margin: 0;
+    border: none; }
+  nav ul li {
+    border: none; }
+  nav ul li:last-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
+  nav ul li a {
+    display: block;
+    font-weight: 700;
+    padding: 0.8rem 4%;
+    color: #0a1c3d;
+    text-decoration: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    transition: background 0.75s ease, color 0.75s ease; }
+  nav ul li a:hover {
+    color: #d07928;
+    background-color: #187594; }
+  nav ul li.active a {
+    background-color: #653b14;
+    color: #6e767d; }
+
+/* ------------------------- main ------------------------- */
+main {
+  grid-area: content;
+  background-color: #fff; }
+  main h1 {
+    font-size: 2.2rem;
+    margin: 1rem 0 0 2%;
+    color: #187594; }
+  main h2 {
+    font-size: 1.9rem;
+    margin: 0.75rem 0 0 2%;
+    color: #1f98c0; }
+  main h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 2%;
+    color: #0a303c; }
+  main p {
+    line-height: 120%;
+    color: #0a1c3d;
+    margin: 0.8rem; }
+  main hr.fadeAway {
+    background: linear-gradient(to right, #1d5d85 0%, rgba(29, 93, 133, 0) 100%);
+    height: 4px;
+    border: none;
+    margin: 0.5rem 2%; }
+  main section {
+    display: block;
+    width: 96%;
+    margin: 0 auto; }
+    main section h2 {
+      font-size: 1.3rem; }
+    main section figure {
+      max-width: 96vw;
+      height: auto;
+      padding: 2%; }
+      main section figure img {
+        width: 100%; }
+
+/* ------------------------- footer ------------------------- */
+footer {
+  grid-area: footer;
+  background-color: #a56020;
+  width: 100%;
+  border-top: 3px solid #0a1c3d; }
+  footer div.icons {
+    text-align-last: center;
+    margin: 10px 2%; }
+  footer div.icons i {
+    color: #62696f;
+    font-size: 1.3rem;
+    padding: 0 15px; }
+  footer p.foot {
+    text-align: center;
+    color: #0a1c3d;
+    margin: 0 2%;
+    padding-bottom: 15px;
+    font-size: 1.1rem; }
+
+/* Stay open (don't collapse) */
+.stayopen:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* media query */
+@media only screen and (min-width: 35rem) {
+  /* grid area setup */
+  #wrapper {
+    grid-template-areas: "header header" "regNav content" "footer footer";
+    grid-template-columns: 150px auto;
+    grid-template-rows: auto; }
+
+  header {
+    margin-left: 150px;
+    height: 145px; }
+
+  .hide {
+    display: none; }
+
+  nav {
+    height: 100%; }
+    nav .hide {
+      display: none; }
+    nav ul li a {
+      padding-left: 15px; }
+
+  main section figure {
+    width: 35vw; }
+  main section.picRt figure {
+    float: right; }
+  main section.picLft figure {
+    float: left; } }
+/* end media query */
+/* media query */
+@media only screen and (min-width: 60rem) {
+  body {
+    padding: 0;
+    background-image: url(../images/sayagata-400px-pattern.png); }
+
+  header,
+  nav,
+  main,
+  footer {
+    max-width: 64rem;
+    margin: 0 auto; }
+
+  div#wrapper {
+    grid-template-areas: "header" "regNav" "content" "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    max-width: 64rem;
+    margin: 0 auto;
+    box-shadow: 0 0 10px #000;
+    background-color: #fff; }
+
+  nav ul {
+    padding-left: 0; }
+    nav ul li {
+      width: auto;
+      float: left;
+      width: 14.2857142857%;
+      border-right: 1px solid rgba(0, 0, 0, 0.3);
+      border-left: 1px solid rgba(0, 0, 0, 0.3); }
+    nav ul li a {
+      text-align: center;
+      padding-left: 0; }
+
+  main section figure {
+    width: 30vw; }
+  main section h2 {
+    font-size: 2rem; }
+  main section p {
+    font-size: 1.3rem; }
+  main h1 {
+    font-size: 2.8rem; } }
+/* end media query */
+
+/*# sourceMappingURL=styles.css.map */
